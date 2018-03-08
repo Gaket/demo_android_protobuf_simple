@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
+import android.widget.Toast;
 import io.reactivex.Observable;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.functions.Consumer;
@@ -58,5 +59,9 @@ public class MainActivity extends AppCompatActivity {
     private void showResult(Person result) {
         TextView textView = findViewById(R.id.txt_main);
         textView.setText(result.toString());
+
+        Toast.makeText(this, String
+            .format("Email: %s, Phone %s, Name %s", result.getEmail(), result.getPhone(),
+                result.getName()), Toast.LENGTH_SHORT).show();
     }
 }

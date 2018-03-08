@@ -19,3 +19,10 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+
+#Okhttp
+-dontwarn okhttp3.**
+-dontwarn okio.**
+
+# Protobuf
+-dontwarn sun.misc.Unsafe
